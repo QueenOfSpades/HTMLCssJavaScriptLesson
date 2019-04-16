@@ -1,0 +1,280 @@
+HTML
+HTML stands for Hyper Text Markup Language
+It is a markup language which describes the structure of a web page.
+HTML elements are called tags.
+The tags label a web page’s content such as its heading, title, paragraphs, and more.
+Browsers use the tags to render the content of the page and will not display them.
+Think of HTML tags as the building blocks for web pages
+
+Why should you learn HTML and CSS?
+Learning any language coding or spoken will be beneficial to your career.  Also, having an understanding of HTML and CSS, you will have a deeper knowledge of the internet.
+
+A simple structure for a web page:
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+<br>I’m on the next line.
+
+</body>
+</html>
+
+Going line by line:
+<!DOCTYPE html> - specifies that this document uses HTML5 markup language
+<html> - root element of an HTML page
+<head> - contains meta information about the document which is data about the HTML document.  The <head> tag goes between the <html> tag & the <body> tags.
+<title> - title used in the browser 
+<body> - place for the visible content for the page
+<h1> - largest heading, most important heading
+<h6> - smallest heading least important heading
+<p> - defines a paragraph
+<br>	- single line break, no closing end tag necessary
+The HTML portion of the document begins at <html> and ends at </html>.
+The visible portion is between <body> and </body>.
+
+<tagname> place your content here, picture, words, etc</tagname>
+
+A few more important tags:
+<img> - image tag
+<a> - link tag
+
+There are more, but we will touch on them later.
+
+With tags, we can use attributes.  Attributes are used to provide additional information for HTML tags.
+
+Attributes are always in the opening tag
+Attributes are key/value pairs like: name="value"
+
+<tagname name="value">
+
+Important attributes.
+href - a specified destination for a link, image, etc
+src - source file
+alt - alternative text
+style - sets the style of HTML tag
+height and width are also attributes
+
+The alt attribute is useful if the image does not exist or browser usage for the blind.
+
+Examples:
+<a href="#contacts-header">Contacts</a>
+
+<h2 id="contacts-header">Contacts</h2>
+
+What happens with this snippet of code?
+
+<img src=”oscar.jpg” alt=”my cat”> 
+What is this a picture of?
+
+<h2 style=”color: pink”>I’m sort of a big deal; I’m heading 2</h2> 
+What is the text going to look like?
+
+Other important attributes:
+background-color - sets the background color of the HTML element
+color - changes the text color
+font-family - changes the  text fonts
+font-size - alters text sizes
+Use text-align - aligns the  text of the HTML element
+
+
+On a side note:
+<!--  This is how you write comments.  -->
+
+<!--  Either with one line
+or two -->
+
+<!--  Either with one line
+or two
+Or three or more  →
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CSS
+CSS stands for Cascading Style Sheets.
+
+CSS are like a set of instruction on how HTML elements are to be displayed.
+
+It can control the layout of multiple web pages all at once.  CSS technology saves a lot of work!
+
+
+CSS can be added to an HTML document in 3 ways:
+
+Inline - using the style attribute for HTML elements
+Internal - using a <style> tag in the <head> section
+External - in an external CSS file
+
+Externally is the most common way to add CSS styles to an HTML document.
+
+<link> - used to incorporate an external CSS file
+
+An Example:
+<link rel="stylesheet" href="stylesheet.css">
+
+The link, rel is stating that this is a stylesheet.
+The href points to the css file.
+
+An external style sheet can be written in any text editor. The file must not contain any HTML and have a .css extension.  Each line mush end in a semi-colon ‘;’.
+
+Here is an example of css being used internally in an HTML document.
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+  color:green;
+  font-family: Lobster;
+  font-size: 325%;
+}
+p  {
+  color: orange;
+  font-family:arial;
+  font-size: 160%;
+}
+</style>
+</head>
+<body>
+
+<h1>Heading 1</h1>
+<p>This is a great paragraph.</p>
+
+</body>
+</html>
+
+Using google’s stylesheets.
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+ 
+ 
+Why use external fonts?
+It gives you more of a variety to style your web page.  An example is Libre Barcode 39.  This font will convert your text into barcode.  Using third party code will greatly reduce your coding time.
+
+Google fonts:
+https://fonts.google.com/
+
+Have a look at all the available fonts.
+
+Google has documentation for their HTML/CSS resources.
+https://google.github.io/styleguide/htmlcssguide.html
+
+
+Before you use any third-party products read it’s documentation.  It will save you time when it comes to debugging and understanding errors.  Take a minute to read through the coding practices.  Practicing good coding principles is essential when working in a group or if you must go back and alter your code for future projects.
+
+JavaScript
+JavaScript makes HTML pages more dynamic and interactive.
+It is the programming language of HTML and the Web and it’s fairly easy to learn.
+
+New HTML tag:
+<script> - used to define a client-side script in this case JavaScript
+ 
+<script> contains script statements, or it points to an external script file.  Common uses for JavaScript are image manipulation, form validation, and making web content dynamic.
+ 
+To select an HTML element, JavaScript very often uses the document.getElementById() method.
+ 
+To select an HTML element by it’s class attribute use document.getElementsByClassName() method.
+ 
+<script>
+document.getElementById("greetings").innerHTML = "Hi There";
+</script>
+ 
+This JavaScript example writes "Hi There" into an HTML element with id="greetings".  The id and class attributes are very important to Javascript.  
+
+Examples:
+document.getElementById("image").src = "picture.gif";
+document.getElementById("myText").style.fontSize = "25px";
+document.getElementsByClassName(“nodOff”).style.color=”puple”;
+document.getElementById("mellowState").style.backgroundColor = "yellow";
+document.getElementsByClassName(“timeTravel”).style.border=”0px”;
+
+Do you know what each number does?  
+ 
+Below is an example of HTML with Javascript.  It uses internal JavaScript.  Like CSS, Javascript can be internal, external and inline.
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First JavaScript</h1>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="para1"></p>
+
+</body>
+</html> 
+
+
+JSON
+
+JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write and for machines to parse and create. It is based on JavaScript Programming Language. JSON is a text format that is used in any programming languages, including C, C++, C#, Java, JavaScript, Perl, Python, and many others. Since JSON is widely accessible, it is an ideal data-interchange language.
+
+JSON is built on two structures:
+
+A collection of name/value pairs.
+
+An ordered list of values. 
+
+These are universal data structures. All modern programming languages support JSON. 
+
+Sample JSON
+{
+    "shoe": "boot",
+    "size": "7w",
+    "color": "red"
+}
+Project 1:
+
+The date returns an integer value that is the number of milliseconds since 1 January 1970 UTC.
+
+var time = Date();
+In this statement we are creating a date variable called time.
+
+The documentation for the Date object is here:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+
+
+In this project, I want you to print out the date in a paragraph on a web page.  It must be today’s date.
+The date must be formatted MM-DD-YYYY.
+The background must be light gray.
+The font must be Acme.
+The text size for the paragraph is 24px.
+The title of the page is Today’s Date.
+The headline is Today’s Date.
+The text color is slate blue.
+Add a link to your favorite.
+Place the Date documentation link in the website footer.
+
+Happy Programming!
+
+If you get stuck please raise your hand.
+
+
+
+Reference & More Information:
+https://www.w3schools.com/htm
+https://developers.google.com/fonts/docs/getting_started
+
